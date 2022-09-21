@@ -1,0 +1,238 @@
+:root {
+    /* Dark */
+    --content-width: 64rem;
+    --color-link: #e9ecef;;
+    --color-nav-background: #292C33;
+    --color-background: #363B44;
+    --color-border: #5d5d65;
+    --color-about: #FF8360;
+    --color-contact: #A6FFA1;
+    --color-active: #3d3d46;
+
+    /* Light */
+    --color-link-white: #4b5056;;
+    --color-nav-background-white: #f1f3f5;
+    --color-background-white: white;
+    --color-border-white: #5d5d65;
+    --color-about-white: #FF8360;
+    --color-contact-white: #A6FFA1;
+    --color-active-white: #f5f3f3;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+* {
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-width);
+}
+
+.wrapper {
+    display: flex;
+    margin: 4rem 1rem 1rem;
+    color: var(--color-link);
+}
+
+.bio {
+    font-size: 1.25rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    color: white;
+}
+
+@media only screen and (min-width: 850px) {
+    .pic {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        content: url("/public/assets/pic.png");
+    }
+
+    .pic:hover {
+        content: url("/public/assets/pic-silly.png");
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Navigation */
+
+.responsive {
+    height: 80%;
+}
+
+.header {
+    background-color: var(--color-nav-background);
+    width: 100%;
+    align-items: center;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0.25rem;
+    max-width: var(--content-width);
+}
+
+.navigation button {
+    color: white;
+    background-color: var(--color-background);
+    border-color: var(--color-border);
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    border-radius: 6px;
+    border-style: dashed;
+    height: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.navigation button:active {
+    background-color: var(--color-active);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav li {
+    display: flex;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+    .theme-toggle {
+        display: none;
+    }
+}
+
+.theme-toggle {
+    font-weight: 700;
+}
+
+.about{
+    color: var(--color-link);
+}
+
+.container-about {
+    color: var(--color-link);
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.contact{
+    color: var(--color-link);
+}
+
+.container-contact {
+    margin: 2rem;
+    color: var(--color-link);
+}
+
+.tud-container {
+    text-decoration: none;
+    color: white;
+}
+
+.tud {
+    text-decoration: none;
+    color: white;
+    content: url("/public/assets/tud.png");
+    width:23px;
+    height:23px;
+}
+
+.todo {
+    background: orange;
+}
+
+/* White */
+
+.white-theme {
+    background-color: var(--color-background-white);
+    color: black;
+}
+
+.white-theme .wrapper{
+    color: var(--color-link-white);
+}
+
+.white-theme h1 {
+    color: #31363b;
+    font-weight: 700;
+}
+
+.white-theme .header {
+    background-color: var(--color-nav-background-white);
+    border-bottom: 2px solid var(--color-border-white);
+}
+
+.white-theme .navigation button {
+    color: #4b5056;
+    background-color: var(--color-background-white);
+    border-color: var(--color-border-white);
+}
+
+.white-theme .navigation button:active {
+    background-color: var(--color-active-white);
+}
+
+.white-theme .about{
+    color: var(--color-link-white);
+}
+
+.white-theme .contact{
+    color: var(--color-link-white);
+}
+
+.white-theme .tud {
+    content: url("/public/assets/tud-white.png");
+}
+
+.white-theme .tud-container {
+    color: var(--color-link-white);
+}
+
+.white-theme .container-about {
+    color: var(--color-link-white);
+}
+
+.white-theme .container-contact {
+    color: var(--color-link-white);
+}
